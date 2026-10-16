@@ -43,7 +43,7 @@ const ITERATIONS = 200000;
 const KEY = "qktech-rebrand-password";
 
 async function unlock(password) {
-  const res = await fetch("app.bin", { cache: "no-store" });
+  const res = await fetch("app-v2.bin", { cache: "no-store" });
   if (!res.ok) throw new Error("The page could not be loaded.");
   const buf = new Uint8Array(await res.arrayBuffer());
   if (buf.length < 29) throw new Error("The page could not be loaded.");
