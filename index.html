@@ -2,90 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QKTech – Rebrand a Word document</title>
-<style>
-  :root { --ink:#1C1C1C; --blue:#00509E; --slate:#6A6A6A; --rule:#DFDFDF; }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: "Segoe UI", Arial, sans-serif; color:var(--ink); background:#fff; }
-  header, footer { display:flex; align-items:center; justify-content:space-between; padding:22px 40px; }
-  header { border-bottom:1px solid var(--rule); }
-  footer { border-top:1px solid var(--rule); margin-top:80px; font-size:13px; color:var(--blue); }
-  header strong { font-size:22px; letter-spacing:-0.04em; }
-  header span, footer span:last-child { color:var(--blue); font-size:14px; }
-  main { max-width:440px; margin:72px auto; padding:0 24px; }
-  h1 { font-size:32px; margin:0 0 10px; }
-  p.lead { font-size:17px; color:var(--slate); margin:0 0 22px; }
-  input { width:100%; font:inherit; font-size:17px; padding:12px 14px; border:1px solid var(--rule); border-radius:8px; }
-  button { margin-top:14px; background:var(--blue); color:#fff; border:0; border-radius:8px; padding:12px 22px; font-size:17px; cursor:pointer; }
-  button:disabled { opacity:0.6; cursor:default; }
-  #msg { color:#B00020; min-height:1.4em; font-size:15px; }
-</style>
+<meta http-equiv="refresh" content="0; url=https://ashcr.github.io/brandgen/">
+<link rel="canonical" href="https://ashcr.github.io/brandgen/">
+<title>QKTech</title>
+<script>location.replace("https://ashcr.github.io/brandgen/");</script>
 </head>
 <body>
-<header>
-  <strong>qktech</strong>
-  <span>www.qktech.com</span>
-</header>
-<main>
-  <h1>Rebrand a Word document</h1>
-  <p class="lead">Enter the password you were given.</p>
-  <form id="gate">
-    <input id="password" type="password" autocomplete="current-password" required>
-    <button type="submit" id="go">Continue</button>
-    <p id="msg"></p>
-  </form>
-</main>
-<footer><span>QualityKiosk Technologies Pvt. Ltd.</span><span>www.qktech.com</span></footer>
-<script>
-"use strict";
-const ITERATIONS = 200000;
-const KEY = "qktech-rebrand-password";
-
-async function unlock(password) {
-  const res = await fetch("app-v2.bin", { cache: "no-store" });
-  if (!res.ok) throw new Error("The page could not be loaded.");
-  const buf = new Uint8Array(await res.arrayBuffer());
-  if (buf.length < 29) throw new Error("The page could not be loaded.");
-  const material = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]);
-  const key = await crypto.subtle.deriveKey(
-    { name: "PBKDF2", salt: buf.slice(0, 16), iterations: ITERATIONS, hash: "SHA-256" },
-    material,
-    { name: "AES-GCM", length: 256 },
-    false,
-    ["decrypt"]
-  );
-  const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: buf.slice(16, 28) }, key, buf.slice(28));
-  return new TextDecoder().decode(plain);
-}
-
-async function openApp(password) {
-  const html = await unlock(password);
-  sessionStorage.setItem(KEY, password);
-  document.open();
-  document.write(html);
-  document.close();
-}
-
-document.getElementById("gate").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const button = document.getElementById("go");
-  const msg = document.getElementById("msg");
-  button.disabled = true;
-  msg.textContent = "Checking…";
-  try {
-    await openApp(document.getElementById("password").value);
-  } catch (err) {
-    sessionStorage.removeItem(KEY);
-    msg.textContent = "That password is not correct.";
-    button.disabled = false;
-  }
-});
-
-const saved = sessionStorage.getItem(KEY);
-if (saved) {
-  openApp(saved).catch(() => sessionStorage.removeItem(KEY));
-}
-</script>
+<p><a href="https://ashcr.github.io/brandgen/">Continue to the rebrand page</a></p>
 </body>
 </html>
