@@ -1,7 +1,7 @@
 # QKTech document rebrand
 
-Open this page, drop in a Word file, and download the rebranded copy:
+The page is password protected:
 
-https://ashcr.github.io/qktech-rebrand/
+https://ashcr.github.io/
 
-The file stays on the computer that opens the page. Nothing is uploaded. The page changes the header, logo, footer, fonts, headings, bullets and tables. Pictures and the words in the document stay as they are.
+Ask the owner for the password. After it is entered, drop in a Word file and download the rebranded copy. The file stays on the computer that opens the page. Nothing is uploaded.
