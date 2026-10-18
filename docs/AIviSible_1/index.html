@@ -836,11 +836,39 @@ a,button{-webkit-tap-highlight-color:transparent}
 }
 :root[data-theme="light"] .scard.aqua svg,
 :root[data-theme="light"] .scard.aqua svg *{
-  stroke:#fff;
+  stroke:#001F54;
 }
-:root[data-theme="light"] .scard.aqua svg [fill="#001F54"],
-:root[data-theme="light"] .scard.aqua svg [fill="#0B1514"]{
-  fill:#fff;
+:root[data-theme="light"] .scard.aqua s{
+  color:#fff;
+  text-decoration-color:#fff;
+}
+:root[data-theme="dark"] .top-cta,
+:root[data-theme="dark"] .cta,
+:root[data-theme="dark"] .btn.primary{
+  background:#00509E;
+  color:#fff !important;
+}
+:root[data-theme="dark"] .top-cta:hover,
+:root[data-theme="dark"] .cta:hover,
+:root[data-theme="dark"] .btn.primary:hover{
+  background:#003D7A;
+  color:#fff !important;
+}
+:root[data-theme="dark"] .scard,
+:root[data-theme="dark"] .scard b,
+:root[data-theme="dark"] .scard s{
+  color:#fff;
+}
+:root[data-theme="dark"] .scard s{
+  text-decoration-color:#fff;
+}
+:root[data-theme="dark"] .scard .ic::before,
+:root[data-theme="dark"] .scard.aqua .ic::before{
+  background:#00509E;
+}
+:root[data-theme="dark"] .scard svg,
+:root[data-theme="dark"] .scard svg *{
+  stroke:#fff;
 }
 :root[data-theme="light"] .final h2,
 :root[data-theme="light"] .final h2 .serif,
