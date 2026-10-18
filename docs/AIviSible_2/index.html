@@ -10,7 +10,7 @@
 <style>
 :root{
   --paper:#EEE6DB; --paper-2:#F6F1EA; --card:#FBF8F3; --ink:#24201B; --ink-2:#5B544B; --rule:#D6CCBE;
-  --saffron:#F88A26; --gold:#B5884A; --navy:#12294F; --orange:#EB703D; --good:#2F7D4F; --bad:#B23A2E;
+  --saffron:#00509E; --gold:#B5884A; --navy:#12294F; --orange:#00509E; --good:#2F7D4F; --bad:#B23A2E;
   --tile-hit:#2F7D4F; --tile-near:#C98A1E; --tile-miss:#8D857A;
   --display:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
   --sans:'Source Sans 3', 'Source Sans Pro', 'Segoe UI', system-ui, sans-serif;
@@ -20,12 +20,12 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#1B1915; --paper-2:#22201B; --card:#2A2721; --ink:#EFE8DD; --ink-2:#B9B0A3; --rule:#3E3930;
-    --navy:#9DB6E0; --gold:#D3A866; --orange:#F2884F; --saffron:#FFA14D; --tile-miss:#5E584F;
+    --navy:#9DB6E0; --gold:#7AB3DE; --orange:#8CC6FF; --saffron:#8CC6FF; --tile-miss:#5E584F;
   }
 }
 :root[data-theme="dark"]{
   --paper:#1B1915; --paper-2:#22201B; --card:#2A2721; --ink:#EFE8DD; --ink-2:#B9B0A3; --rule:#3E3930;
-  --navy:#9DB6E0; --gold:#D3A866; --orange:#F2884F; --saffron:#FFA14D; --tile-miss:#5E584F;
+  --navy:#9DB6E0; --gold:#7AB3DE; --orange:#8CC6FF; --saffron:#8CC6FF; --tile-miss:#5E584F;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
@@ -308,20 +308,20 @@ footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-2);f
 .toast.show{opacity:1}
 </style>
 <style id="brand">
-/* Book interior: paper #F9F7FA, navy #193257, orange #ED703D, Source Sans 3 */
+/* QKTech blue: orange accents are primary blue #00509E */
 :root, :root:not([data-theme="light"]), :root[data-theme="dark"]{
   --paper:#0E1829; --paper-2:#122036; --card:#16243D; --card-2:#1D2F4E; --ink:#EEF1F6; --ink-2:#A9B3C4; --rule:#263859;
-  --aqua:#B4C8EA; --cream:#F2814F; --on-light:#1C1C1C;
-  --navy:#B4C8EA; --orange:#F2814F; --gold:#F2814F; --saffron:#F2814F; --good:#2F7D4F; --bad:#FF8A7A;
-  --tile-hit:#ED703D; --tile-near:#3D5D92; --tile-miss:#3A4A66;
+  --aqua:#B4C8EA; --cream:#8CC6FF; --on-light:#1C1C1C;
+  --navy:#B4C8EA; --orange:#8CC6FF; --gold:#8CC6FF; --saffron:#8CC6FF; --good:#2F7D4F; --bad:#FF8A7A;
+  --tile-hit:#00509E; --tile-near:#3D5D92; --tile-miss:#3A4A66;
   --head:'Source Sans 3','Segoe UI',system-ui,sans-serif; --serif:'Source Sans 3','Segoe UI',system-ui,sans-serif; --sans:'Source Sans 3','Segoe UI',system-ui,sans-serif;
   --display:var(--head);
 }
 :root[data-theme="light"]{
   --paper:#F9F7FA; --paper-2:#F1EEF4; --card:#FFFFFF; --card-2:#EDF0F6; --ink:#262A33; --ink-2:#5D6574; --rule:#E2DEE7;
-  --aqua:#193257; --cream:#ED703D; --on-light:#FFFFFF;
-  --navy:#193257; --orange:#ED703D; --gold:#193257; --saffron:#ED703D; --good:#2F7D4F; --bad:#C0392B;
-  --tile-hit:#ED703D; --tile-near:#193257; --tile-miss:#A7AEBB;
+  --aqua:#193257; --cream:#00509E; --on-light:#FFFFFF;
+  --navy:#193257; --orange:#00509E; --gold:#00509E; --saffron:#00509E; --good:#2F7D4F; --bad:#C0392B;
+  --tile-hit:#00509E; --tile-near:#193257; --tile-miss:#A7AEBB;
 }
 body{font-family:var(--sans);font-size:18px;letter-spacing:-.005em}
 h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.03em;line-height:1.04}
@@ -347,12 +347,12 @@ nav.main a[aria-current="page"]{background:transparent;color:var(--cream);box-sh
 :root[data-theme="light"] nav.main a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
 nav.main a[aria-current="page"]:hover{color:var(--cream)}
 .top-cta{display:inline-flex;align-items:center;gap:28px;background:var(--cream);color:var(--on-light)!important;text-decoration:none;font-family:var(--head);font-weight:600;font-size:17px;padding:10px 16px;border-radius:4px;white-space:nowrap}
-.top-cta:hover{background:#193257;color:#fff!important}
+.top-cta:hover{background:#003D7A;color:#fff!important}
 @media (max-width:760px){.top-cta{display:none}}
 .theme-btn{border-color:var(--rule);color:var(--ink)}
 /* CTA buttons */
 .cta,.btn.primary{display:inline-flex;align-items:center;justify-content:space-between;gap:56px;background:var(--cream);color:var(--on-light)!important;border:0;border-radius:4px;padding:16px 22px;font-family:var(--head);font-weight:600;font-size:20px;letter-spacing:-.02em;text-decoration:none;cursor:pointer}
-.cta:hover,.btn.primary:hover{background:#193257;color:#fff!important}
+.cta:hover,.btn.primary:hover{background:#003D7A;color:#fff!important}
 .cta svg,.btn.primary svg{flex:none}
 .btn{border-radius:4px;border:1px solid var(--ink-2);color:var(--ink);font-family:var(--head);font-weight:600}
 .btn:hover{background:var(--ink);color:var(--paper)}
@@ -1324,7 +1324,7 @@ function authors(){
 
 /* --- Ask Ganesha --- */
 const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line drawing of Lord Ganesha" fill="none" stroke="#0B1514" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="120" cy="128" r="100" fill="#FCE9DF" stroke="none"/>
+  <circle cx="120" cy="128" r="100" fill="#E5F0FB" stroke="none"/>
   <path d="M86 96C44 74 30 132 54 160C66 172 84 164 90 148" fill="#fff"/>
   <path d="M154 96C196 74 210 132 186 160C174 172 156 164 150 148" fill="#fff"/>
   <path d="M58 118c6-6 14-8 22-6M182 118c-6-6-14-8-22-6" stroke-width="1.8"/>
@@ -1332,7 +1332,7 @@ const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line draw
   <circle cx="120" cy="48" r="3" fill="#0B1514"/><circle cx="104" cy="58" r="2.2" fill="#0B1514"/><circle cx="136" cy="58" r="2.2" fill="#0B1514"/>
   <path d="M92 76h56" stroke-width="3.2"/>
   <ellipse cx="120" cy="106" rx="34" ry="34" fill="#fff"/>
-  <path d="M114 80c2 8 10 8 12 0" stroke="#ED703D" stroke-width="2.6"/><path d="M120 84v8" stroke="#ED703D" stroke-width="2.6"/>
+  <path d="M114 80c2 8 10 8 12 0" stroke="#00509E" stroke-width="2.6"/><path d="M120 84v8" stroke="#00509E" stroke-width="2.6"/>
   <path d="M100 104c5-5 11-5 15 0c-5 4-10 4-15 0z"/><path d="M125 104c4-5 10-5 15 0c-5 4-10 4-15 0z"/>
   <circle cx="108" cy="104" r="1.8" fill="#0B1514"/><circle cx="132" cy="104" r="1.8" fill="#0B1514"/>
   <path d="M120 116C118 150 122 172 142 182C158 190 168 176 160 168" stroke-width="22"/>
@@ -1340,7 +1340,7 @@ const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line draw
   <path d="M113 134h14M113 146h14M116 158h13M124 169l10 6" stroke-width="1.6"/>
   <path d="M104 126c-8 12-7 26 2 34" stroke-width="9"/><path d="M104 126c-8 12-7 26 2 34" stroke="#fff" stroke-width="5"/>
   <path d="M136 126c4 4 5 8 4 12" stroke-width="9"/><path d="M136 126c4 4 5 8 4 12" stroke="#fff" stroke-width="5"/>
-  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#ED703D" stroke-width="2"/>
+  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#00509E" stroke-width="2"/>
   <path d="M60 214c38-12 82-12 120 0" stroke-width="1.8"/>
 </svg>`;
 const GANESHA_LESSONS = [["Big ears","Listen more than you speak, especially to buyers."],["Small eyes","Focus on the few beliefs worth earning."],["Long trunk","Reach far, and adapt to every room."],["One tusk","Grit. Sacrifice certainty for insight."],["Large belly","Digest knowledge and turn it into energy."],["The modak","Reward the patient work of building trust."]];
