@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The In(AI)visible Marketing Orchestra · Reader Companion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Serif+Display&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#EEE6DB; --paper-2:#F6F1EA; --card:#FBF8F3; --ink:#24201B; --ink-2:#5B544B; --rule:#D6CCBE;
@@ -308,19 +308,20 @@ footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-2);f
 .toast.show{opacity:1}
 </style>
 <style id="brand">
-/* 10Xer-inspired brand layer */
+/* Book interior: paper #F9F7FA, navy #193257, orange #ED703D, Source Sans 3 */
 :root, :root:not([data-theme="light"]), :root[data-theme="dark"]{
-  --paper:#0B1514; --paper-2:#10201F; --card:#132A28; --card-2:#1E4340; --ink:#EEF4F2; --ink-2:#A3B8B4; --rule:#24413E;
-  --aqua:#74DDD5; --cream:#FCEFC3; --on-light:#0B1514;
-  --navy:#74DDD5; --orange:#FCEFC3; --gold:#74DDD5; --saffron:#FCEFC3; --good:#5FD39A; --bad:#FF8A7A;
-  --tile-hit:#E88860; --tile-near:#4E9E95; --tile-miss:#3A5552;
-  --head:'Inter Tight','Helvetica Neue',Arial,sans-serif; --serif:'DM Serif Display',Georgia,serif; --sans:'DM Sans','Segoe UI',system-ui,sans-serif;
+  --paper:#0E1829; --paper-2:#122036; --card:#16243D; --card-2:#1D2F4E; --ink:#EEF1F6; --ink-2:#A9B3C4; --rule:#263859;
+  --aqua:#B4C8EA; --cream:#F2814F; --on-light:#1C1C1C;
+  --navy:#B4C8EA; --orange:#F2814F; --gold:#F2814F; --saffron:#F2814F; --good:#2F7D4F; --bad:#FF8A7A;
+  --tile-hit:#ED703D; --tile-near:#3D5D92; --tile-miss:#3A4A66;
+  --head:'Source Sans 3','Segoe UI',system-ui,sans-serif; --serif:'Source Sans 3','Segoe UI',system-ui,sans-serif; --sans:'Source Sans 3','Segoe UI',system-ui,sans-serif;
   --display:var(--head);
 }
 :root[data-theme="light"]{
-  --paper:#F4F1E6; --paper-2:#ECE7D6; --card:#FFFFFF; --card-2:#DDF3F0; --ink:#0E2321; --ink-2:#4A615D; --rule:#D3DFDB;
-  --navy:#137A72; --orange:#8A6A12; --gold:#137A72; --saffron:#C9A43A; --good:#2F7D4F; --bad:#B23A2E;
-  --tile-hit:#E88860; --tile-near:#4E9E95; --tile-miss:#8DA09C;
+  --paper:#F9F7FA; --paper-2:#F1EEF4; --card:#FFFFFF; --card-2:#EDF0F6; --ink:#262A33; --ink-2:#5D6574; --rule:#E2DEE7;
+  --aqua:#193257; --cream:#ED703D; --on-light:#FFFFFF;
+  --navy:#193257; --orange:#ED703D; --gold:#193257; --saffron:#ED703D; --good:#2F7D4F; --bad:#C0392B;
+  --tile-hit:#ED703D; --tile-near:#193257; --tile-miss:#A7AEBB;
 }
 body{font-family:var(--sans);font-size:18px;letter-spacing:-.005em}
 h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.03em;line-height:1.04}
@@ -328,7 +329,7 @@ h1{font-size:clamp(42px,6vw,76px)}
 h2{font-size:clamp(32px,4vw,52px)}
 h3{font-size:24px;letter-spacing:-.02em}
 .serif{display:block;font-family:var(--serif);font-weight:400;letter-spacing:-.01em;color:var(--cream)}
-:root[data-theme="light"] .serif{color:var(--navy)}
+:root[data-theme="light"] .serif{color:var(--orange)}
 .serif.inline{display:inline}
 .lede{color:var(--ink-2);font-size:20px}
 .kicker{color:var(--cream);font-weight:500;font-family:var(--sans)}
@@ -346,12 +347,12 @@ nav.main a[aria-current="page"]{background:transparent;color:var(--cream);box-sh
 :root[data-theme="light"] nav.main a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
 nav.main a[aria-current="page"]:hover{color:var(--cream)}
 .top-cta{display:inline-flex;align-items:center;gap:28px;background:var(--cream);color:var(--on-light)!important;text-decoration:none;font-family:var(--head);font-weight:600;font-size:17px;padding:10px 16px;border-radius:4px;white-space:nowrap}
-.top-cta:hover{background:#fff}
+.top-cta:hover{background:#193257;color:#fff!important}
 @media (max-width:760px){.top-cta{display:none}}
 .theme-btn{border-color:var(--rule);color:var(--ink)}
 /* CTA buttons */
 .cta,.btn.primary{display:inline-flex;align-items:center;justify-content:space-between;gap:56px;background:var(--cream);color:var(--on-light)!important;border:0;border-radius:4px;padding:16px 22px;font-family:var(--head);font-weight:600;font-size:20px;letter-spacing:-.02em;text-decoration:none;cursor:pointer}
-.cta:hover,.btn.primary:hover{background:#fff;color:var(--on-light)}
+.cta:hover,.btn.primary:hover{background:#193257;color:#fff!important}
 .cta svg,.btn.primary svg{flex:none}
 .btn{border-radius:4px;border:1px solid var(--ink-2);color:var(--ink);font-family:var(--head);font-weight:600}
 .btn:hover{background:var(--ink);color:var(--paper)}
@@ -362,7 +363,7 @@ nav.main a[aria-current="page"]:hover{color:var(--cream)}
 .hx-sub{color:var(--ink-2);margin:22px 0 12px;font-size:18px}
 .checks{list-style:none;padding:0;margin:0 0 30px}
 .checks li{display:flex;gap:12px;align-items:center;padding:5px 0;font-size:17px}
-.checks li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:var(--aqua) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%230B1514' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.checks li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:var(--aqua) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
 .arch{position:relative;justify-self:center;width:min(100%,400px);aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:var(--cream);display:grid;place-items:end center;padding:40px 48px 0;overflow:hidden}
 .arch::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,rgba(11,21,20,.07) 26px 44px)}
 .arch img{position:relative;width:78%;border-radius:4px 4px 0 0;box-shadow:0 -10px 40px -12px rgba(0,0,0,.45)}
@@ -1323,7 +1324,7 @@ function authors(){
 
 /* --- Ask Ganesha --- */
 const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line drawing of Lord Ganesha" fill="none" stroke="#0B1514" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="120" cy="128" r="100" fill="#FCEFC3" stroke="none"/>
+  <circle cx="120" cy="128" r="100" fill="#FCE9DF" stroke="none"/>
   <path d="M86 96C44 74 30 132 54 160C66 172 84 164 90 148" fill="#fff"/>
   <path d="M154 96C196 74 210 132 186 160C174 172 156 164 150 148" fill="#fff"/>
   <path d="M58 118c6-6 14-8 22-6M182 118c-6-6-14-8-22-6" stroke-width="1.8"/>
@@ -1331,7 +1332,7 @@ const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line draw
   <circle cx="120" cy="48" r="3" fill="#0B1514"/><circle cx="104" cy="58" r="2.2" fill="#0B1514"/><circle cx="136" cy="58" r="2.2" fill="#0B1514"/>
   <path d="M92 76h56" stroke-width="3.2"/>
   <ellipse cx="120" cy="106" rx="34" ry="34" fill="#fff"/>
-  <path d="M114 80c2 8 10 8 12 0" stroke="#E88860" stroke-width="2.6"/><path d="M120 84v8" stroke="#E88860" stroke-width="2.6"/>
+  <path d="M114 80c2 8 10 8 12 0" stroke="#ED703D" stroke-width="2.6"/><path d="M120 84v8" stroke="#ED703D" stroke-width="2.6"/>
   <path d="M100 104c5-5 11-5 15 0c-5 4-10 4-15 0z"/><path d="M125 104c4-5 10-5 15 0c-5 4-10 4-15 0z"/>
   <circle cx="108" cy="104" r="1.8" fill="#0B1514"/><circle cx="132" cy="104" r="1.8" fill="#0B1514"/>
   <path d="M120 116C118 150 122 172 142 182C158 190 168 176 160 168" stroke-width="22"/>
@@ -1339,7 +1340,7 @@ const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line draw
   <path d="M113 134h14M113 146h14M116 158h13M124 169l10 6" stroke-width="1.6"/>
   <path d="M104 126c-8 12-7 26 2 34" stroke-width="9"/><path d="M104 126c-8 12-7 26 2 34" stroke="#fff" stroke-width="5"/>
   <path d="M136 126c4 4 5 8 4 12" stroke-width="9"/><path d="M136 126c4 4 5 8 4 12" stroke="#fff" stroke-width="5"/>
-  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#E88860" stroke-width="2"/>
+  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#ED703D" stroke-width="2"/>
   <path d="M60 214c38-12 82-12 120 0" stroke-width="1.8"/>
 </svg>`;
 const GANESHA_LESSONS = [["Big ears","Listen more than you speak, especially to buyers."],["Small eyes","Focus on the few beliefs worth earning."],["Long trunk","Reach far, and adapt to every room."],["One tusk","Grit. Sacrifice certainty for insight."],["Large belly","Digest knowledge and turn it into energy."],["The modak","Reward the patient work of building trust."]];

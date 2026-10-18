@@ -6,7 +6,7 @@
 <title>The AIviSIble Orchestra · Reader Companion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#EEE6DB; --paper-2:#F6F1EA; --card:#FBF8F3; --ink:#24201B; --ink-2:#5B544B; --rule:#D6CCBE;
@@ -159,7 +159,7 @@ h2[tabindex]:focus{outline:none}
 .btn.primary:hover{background:var(--ink);border-color:var(--ink)}
 .az{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:18px}
 .az button{border:0;background:transparent;width:30px;height:30px;border-radius:6px;font-weight:600;font-size:15px;color:var(--ink-2)}
-.az button[aria-pressed="true"]{background:var(--saffron);color:#24201B}
+.az button[aria-pressed="true"]{background:var(--saffron);color:#fff}
 .az button:disabled{opacity:.3;cursor:default}
 .count{color:var(--ink-2);font-size:15px;margin:0 0 8px}
 .terms{list-style:none;padding:0;margin:0;columns:2;column-gap:48px}
@@ -309,39 +309,39 @@ footer{border-top:1px solid var(--rule);padding:32px 0 48px;color:var(--ink-2);f
 </style>
 <style id="brand">
 /* ===== Book brand layer: The AIviSIble Orchestra =====
-   Colours sampled from the book interior: paper #F9F7FA, navy #193257, orange #ED703D */
+   QKTech brand: flash white #F1F1F1, dark #1C1C1C, primary blue #00509E. Inter for headings, Manrope for body. */
 :root, :root:not([data-theme="light"]), :root[data-theme="dark"], :root[data-theme="light"]{
-  --paper:#F9F7FA; --paper-2:#F1EEF4; --card:#FFFFFF; --card-2:#EDF0F6; --ink:#262A33; --ink-2:#5D6574; --mute:#7E889A; --rule:#E2DEE7;
-  --navy:#193257; --navy-solid:#193257; --band:#193257; --orange:#ED703D; --orange-ink:#C0501C; --orange-tint:#FCE9DF;
+  --paper:#F1F1F1; --paper-2:#F0F0F0; --card:#FFFFFF; --card-2:#E5F0FB; --ink:#1C1C1C; --ink-2:#5A5A5A; --mute:#6A6A6A; --rule:#DFDFDF;
+  --navy:#001F54; --navy-solid:#001F54; --band:#001F54; --orange:#00509E; --orange-ink:#003D7A; --orange-tint:#E5F0FB;
   --aqua:var(--navy); --cream:var(--orange); --on-light:#FFFFFF; --gold:var(--navy); --saffron:var(--orange);
-  --good:#2F7D4F; --bad:#C0392B;
-  --tile-hit:#ED703D; --tile-near:#193257; --tile-miss:#A7AEBB;
-  --sans:'Source Sans 3','Source Sans Pro','Segoe UI',system-ui,sans-serif; --head:var(--sans); --serif:var(--sans); --display:var(--sans);
+  --good:#019E84; --bad:#B00020;
+  --tile-hit:#00509E; --tile-near:#001F54; --tile-miss:#C5C5C5;
+  --sans:'Manrope','Segoe UI',system-ui,sans-serif; --head:'Inter','Segoe UI',system-ui,sans-serif; --serif:'Inter','Segoe UI',system-ui,sans-serif; --display:'Inter','Segoe UI',system-ui,sans-serif;
 }
 :root[data-theme="dark"]{
-  --paper:#0E1829; --paper-2:#122036; --card:#16243D; --card-2:#1D2F4E; --ink:#EEF1F6; --ink-2:#A9B3C4; --mute:#7F8BA0; --rule:#263859;
-  --navy:#B4C8EA; --navy-solid:#2B4A7C; --band:#16243D; --orange:#F2814F; --orange-ink:#F5966B; --orange-tint:#3B2A28;
-  --tile-hit:#ED703D; --tile-near:#3D5D92; --tile-miss:#3A4A66;
+  --paper:#1C1C1C; --paper-2:#111111; --card:#001F3E; --card-2:#002B56; --ink:#F1F1F1; --ink-2:#C9D7EA; --mute:#9AA8BA; --rule:#2A2A2A;
+  --navy:#8CC6FF; --navy-solid:#00509E; --band:#001F3E; --orange:#8CC6FF; --orange-ink:#AAD5FF; --orange-tint:#00244A;
+  --tile-hit:#00509E; --tile-near:#3B7FBF; --tile-miss:#3A4554;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#0E1829; --paper-2:#122036; --card:#16243D; --card-2:#1D2F4E; --ink:#EEF1F6; --ink-2:#A9B3C4; --mute:#7F8BA0; --rule:#263859;
-    --navy:#B4C8EA; --navy-solid:#2B4A7C; --band:#16243D; --orange:#F2814F; --orange-ink:#F5966B; --orange-tint:#3B2A28;
-    --tile-hit:#ED703D; --tile-near:#3D5D92; --tile-miss:#3A4A66;
+    --paper:#1C1C1C; --paper-2:#111111; --card:#001F3E; --card-2:#002B56; --ink:#F1F1F1; --ink-2:#C9D7EA; --mute:#9AA8BA; --rule:#2A2A2A;
+    --navy:#8CC6FF; --navy-solid:#00509E; --band:#001F3E; --orange:#8CC6FF; --orange-ink:#AAD5FF; --orange-tint:#00244A;
+    --tile-hit:#00509E; --tile-near:#3B7FBF; --tile-miss:#3A4554;
   }
 }
-/* the printed page always stays paper-white, even at night */
+/* the printed page stays light, in QKTech blue */
 .spread,.cover,.pb-peek{
-  --ink:#262A33; --ink-2:#5D6574; --mute:#7E889A; --rule:#E2DEE7; --navy:#193257; --orange:#ED703D; --orange-ink:#C0501C; --card:#FFFFFF;
+  --ink:#1C1C1C; --ink-2:#5A5A5A; --mute:#6A6A6A; --rule:#DFDFDF; --navy:#001F54; --orange:#00509E; --orange-ink:#003D7A; --card:#FFFFFF;
   color:var(--ink);
 }
 
 body{font-family:var(--sans);font-size:18px;line-height:1.6;letter-spacing:0}
-h1,h2,h3{font-family:var(--sans);font-weight:700;letter-spacing:-.015em;line-height:1.06;color:var(--navy)}
+h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-height:1.06;color:var(--navy)}
 h1{font-size:clamp(44px,6vw,80px)}
 h2{font-size:clamp(32px,4vw,50px)}
 h3{font-size:24px}
-.serif{display:block;font-family:var(--sans);font-weight:700;letter-spacing:-.02em;color:var(--orange)}
+.serif{display:block;font-family:var(--head);font-weight:700;letter-spacing:-.02em;color:var(--orange)}
 .serif.inline{display:inline}
 .o{color:var(--orange)}
 .lede{color:var(--ink-2);font-size:20px}
@@ -350,7 +350,7 @@ a{color:var(--navy)}
 a:hover{color:var(--orange-ink)}
 :focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 
-/* book signature: the short orange rule under every title */
+/* book signature: the short blue rule under every title */
 .page-head h2::after,.shead h2::after,.pb-head h2::after{content:"";display:block;width:96px;height:5px;background:var(--orange);margin-top:22px;border-radius:1px}
 .shead h2::after{margin-left:auto;margin-right:auto}
 .runhead{display:flex;justify-content:space-between;gap:16px;font-size:13px;color:var(--mute);padding-top:20px}
@@ -420,26 +420,26 @@ nav.main a.nav-pre{display:none;color:var(--orange-ink)}
   .spread{grid-template-columns:1fr}
   .spread::after{display:none}
   .pg{min-height:0;padding-bottom:76px}
-  .pg-l{border-bottom:1px dashed #E2DEE7;min-height:520px}
+  .pg-l{border-bottom:1px dashed #DFDFDF;min-height:520px}
 }
 
 /* ===== typographic cover ===== */
 .cover{container-type:inline-size;position:relative;aspect-ratio:2/3;width:100%;background:linear-gradient(90deg,rgba(25,50,87,.13),rgba(25,50,87,0) 5%,rgba(255,255,255,.6) 6%,rgba(255,255,255,0) 8%),#FFFFFF;border-radius:2px 5px 5px 2px;box-shadow:0 30px 50px -28px rgba(25,50,87,.55),0 0 0 1px rgba(25,50,87,.08);overflow:hidden;text-align:left}
 .cover .cv-in{position:absolute;inset:0;display:flex;flex-direction:column;padding:10cqw 9cqw 7cqw 11cqw}
-.cover .cv-the{display:block;font-weight:700;color:#193257;font-size:8cqw;line-height:1}
-.cover .cv-t{display:block;font-weight:800;color:#193257;font-size:15.2cqw;line-height:.95;letter-spacing:-.04em}
-.cover .cv-t .o{color:#ED703D}
-.cover .cv-bar{display:block;width:26cqw;height:1.6cqw;background:#ED703D;margin:5cqw 0 4cqw}
-.cover .cv-sub{display:block;font-size:4.1cqw;line-height:1.35;color:#5D6574;max-width:70cqw}
+.cover .cv-the{display:block;font-weight:700;color:#001F54;font-size:8cqw;line-height:1}
+.cover .cv-t{display:block;font-weight:800;color:#001F54;font-size:15.2cqw;line-height:.95;letter-spacing:-.04em}
+.cover .cv-t .o{color:#00509E}
+.cover .cv-bar{display:block;width:26cqw;height:1.6cqw;background:#00509E;margin:5cqw 0 4cqw}
+.cover .cv-sub{display:block;font-size:4.1cqw;line-height:1.35;color:#5A5A5A;max-width:70cqw}
 .cover .cv-art{display:block;width:118%;margin:auto -9cqw 0 -11cqw;height:auto}
-.cover .cv-auth{font-size:3.3cqw;white-space:nowrap;font-weight:700;letter-spacing:.05em;color:#C0501C;text-align:center;margin-top:3cqw}
-.cover .cv-auth span{color:#A7AEBB;margin:0 2.5cqw;font-weight:400}
-.cv-art .s{fill:none;stroke:#193257;stroke-width:1.1;opacity:.55}
-.cv-art .s2{fill:none;stroke:#ED703D;stroke-width:1.8}
-.cv-art .s3{fill:none;stroke:#193257;stroke-width:.6;opacity:.25}
-.cv-art circle{fill:#ED703D}
-.cv-art circle.n{fill:#193257}
-.cv-art text{font-family:var(--sans);font-size:7px;fill:#7E889A;letter-spacing:.06em}
+.cover .cv-auth{font-size:3.3cqw;white-space:nowrap;font-weight:700;letter-spacing:.05em;color:#003D7A;text-align:center;margin-top:3cqw}
+.cover .cv-auth span{color:#C5C5C5;margin:0 2.5cqw;font-weight:400}
+.cv-art .s{fill:none;stroke:#001F54;stroke-width:1.1;opacity:.55}
+.cv-art .s2{fill:none;stroke:#00509E;stroke-width:1.8}
+.cv-art .s3{fill:none;stroke:#001F54;stroke-width:.6;opacity:.25}
+.cv-art circle{fill:#00509E}
+.cv-art circle.n{fill:#001F54}
+.cv-art text{font-family:var(--sans);font-size:7px;fill:#6A6A6A;letter-spacing:.06em}
 
 /* section heads */
 .shead{text-align:center;max-width:820px;margin:0 auto;padding:64px 24px 28px}
@@ -453,7 +453,7 @@ nav.main a.nav-pre{display:none;color:var(--orange-ink)}
 .scard.aqua:hover{color:#fff}
 .scard .ic{position:relative;width:110px;height:110px;margin-bottom:auto}
 .scard .ic::before{content:"";position:absolute;left:20px;top:16px;width:76px;height:76px;border-radius:50%;background:var(--orange-tint)}
-.scard.aqua .ic::before{background:#FCE9DF}
+.scard.aqua .ic::before{background:#E5F0FB}
 .scard .ic svg{position:relative;width:110px;height:110px}
 .scard s{position:relative;font-size:15px;color:var(--ink-2);text-decoration-thickness:1.5px;margin-top:18px}
 .scard.aqua s{color:rgba(255,255,255,.72)}
@@ -496,12 +496,12 @@ nav.main a.nav-pre{display:none;color:var(--orange-ink)}
 /* final band */
 .final{background:var(--band);color:#fff;text-align:center;padding:84px 24px;margin-top:64px}
 .final h2{color:#fff}
-.final h2 .serif{color:#F58B5C}
+.final h2 .serif{color:#3B7FBF}
 .final h2::after{content:"";display:block;width:96px;height:5px;background:var(--orange);margin:22px auto 0}
 .final p{max-width:560px;margin:18px auto 28px;color:rgba(255,255,255,.78)}
-.final .cta:hover{background:#fff;color:#193257!important}
+.final .cta:hover{background:#fff;color:#001F54!important}
 .final .btn{border-color:rgba(255,255,255,.6);color:#fff;margin-left:8px;padding:14px 20px;text-decoration:none;display:inline-flex}
-.final .btn:hover{background:#fff;color:#193257;border-color:#fff}
+.final .btn:hover{background:#fff;color:#001F54;border-color:#fff}
 
 /* existing components tuned */
 .page-head h2 .serif{font-size:1em}
@@ -528,7 +528,7 @@ nav.main a.nav-pre{display:none;color:var(--orange-ink)}
 .games .game:nth-child(even){background:var(--band);border-color:var(--band);border-top-color:var(--orange);color:#fff}
 .games .game:nth-child(even) h3{color:#fff}
 .games .game:nth-child(even) p{color:rgba(255,255,255,.75)}
-.games .game:nth-child(even) .glyph{color:#F58B5C}
+.games .game:nth-child(even) .glyph{color:#3B7FBF}
 .games .game:nth-child(even) .meta{color:rgba(255,255,255,.85)}
 .game .glyph{color:var(--orange);font-family:var(--sans);font-weight:700}
 .game .meta{color:var(--orange-ink)}
@@ -539,7 +539,7 @@ nav.main a.nav-pre{display:none;color:var(--orange-ink)}
 .clue{color:var(--navy);font-family:var(--sans);font-style:normal;font-weight:600}
 .slot{font-family:var(--sans)}
 .letters button{border-radius:3px}
-.mcard .front{background:var(--band);color:#F58B5C;font-family:var(--sans);font-weight:700}
+.mcard .front{background:var(--band);color:#3B7FBF;font-family:var(--sans);font-weight:700}
 .mcard .backf{border-radius:3px}
 .mcard .backf.term{color:var(--navy)}
 .archetype{color:var(--orange);font-family:var(--sans);font-weight:700}
@@ -624,7 +624,7 @@ footer .fol i{display:block;width:22px;height:5px;background:var(--orange)}
 .addons{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:5px solid var(--orange);background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:36px 0 8px}
 .addon{padding:24px 24px 26px;border-right:1px solid var(--rule)}
 .addon:last-child{border-right:0}
-.addon svg{width:52px;height:52px;display:block;margin-bottom:14px;background:#FCE9DF;border-radius:50%;padding:7px}
+.addon svg{width:52px;height:52px;display:block;margin-bottom:14px;background:#E5F0FB;border-radius:50%;padding:7px}
 .addon b{display:block;font-size:19px;color:var(--navy);line-height:1.2}
 .addon p{margin:6px 0 0;font-size:16px;color:var(--ink-2);line-height:1.45}
 @media (max-width:900px){.addons{grid-template-columns:1fr 1fr}.addon:nth-child(2){border-right:0}.addon:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
@@ -1089,11 +1089,11 @@ let cleanup = null;
 /* ============ VIEWS ============ */
 const CHEV = '<svg width="12" height="20" viewBox="0 0 12 20" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const ICONS = {
- book:'<svg viewBox="0 0 120 120" fill="none" stroke="#193257" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M24 40c14-6 26-4 36 4 10-8 22-10 36-4v46c-14-6-26-4-36 4-10-8-22-10-36-4z" fill="#fff"/><path d="M60 44v46"/><path d="M32 52c8-2 15-1 21 2M32 61c8-2 15-1 21 2M32 70c8-2 15-1 21 2M67 54c6-3 13-4 21-2M67 63c6-3 13-4 21-2M67 72c6-3 13-4 21-2"/></svg>',
- lens:'<svg viewBox="0 0 120 120" fill="none" stroke="#193257" stroke-width="2.6" stroke-linecap="round"><circle cx="52" cy="54" r="22" fill="#fff"/><path d="M42 46c3-5 8-7 13-7" /><path d="M68 70l22 22" stroke-width="9"/><path d="M40 58h24M40 50h18" stroke-width="2"/></svg>',
- notes:'<svg viewBox="0 0 120 120" fill="none" stroke="#193257" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M46 80V38l40-8v42" /><path d="M46 46l40-8" stroke-width="5"/><ellipse cx="38" cy="82" rx="10" ry="7" fill="#193257" transform="rotate(-18 38 82)"/><ellipse cx="78" cy="74" rx="10" ry="7" fill="#193257" transform="rotate(-18 78 74)"/><path d="M22 96c20-6 52-6 76 0" stroke-width="2"/></svg>',
- gears:'<svg viewBox="0 0 120 120" fill="none" stroke="#193257" stroke-linecap="butt"><circle cx="48" cy="56" r="18" stroke-width="10" stroke-dasharray="7 5.2" fill="none"/><circle cx="48" cy="56" r="13" stroke-width="2.6" fill="#fff"/><circle cx="48" cy="56" r="5" stroke-width="2.6"/><circle cx="80" cy="76" r="14" stroke-width="9" stroke-dasharray="6 4.9"/><circle cx="80" cy="76" r="9.5" stroke-width="2.6" fill="#fff"/><circle cx="80" cy="76" r="3.5" stroke-width="2.6"/></svg>',
- crown:'<svg viewBox="0 0 120 120" fill="none" stroke="#193257" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M28 82l-6-38 20 16 18-26 18 26 20-16-6 38z" fill="#fff"/><rect x="28" y="86" width="64" height="10" rx="2" fill="#fff"/><circle cx="22" cy="42" r="4" fill="#193257"/><circle cx="60" cy="31" r="4" fill="#193257"/><circle cx="98" cy="42" r="4" fill="#193257"/><path d="M38 74h44M44 66h32" stroke-width="2"/></svg>'
+ book:'<svg viewBox="0 0 120 120" fill="none" stroke="#001F54" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M24 40c14-6 26-4 36 4 10-8 22-10 36-4v46c-14-6-26-4-36 4-10-8-22-10-36-4z" fill="#fff"/><path d="M60 44v46"/><path d="M32 52c8-2 15-1 21 2M32 61c8-2 15-1 21 2M32 70c8-2 15-1 21 2M67 54c6-3 13-4 21-2M67 63c6-3 13-4 21-2M67 72c6-3 13-4 21-2"/></svg>',
+ lens:'<svg viewBox="0 0 120 120" fill="none" stroke="#001F54" stroke-width="2.6" stroke-linecap="round"><circle cx="52" cy="54" r="22" fill="#fff"/><path d="M42 46c3-5 8-7 13-7" /><path d="M68 70l22 22" stroke-width="9"/><path d="M40 58h24M40 50h18" stroke-width="2"/></svg>',
+ notes:'<svg viewBox="0 0 120 120" fill="none" stroke="#001F54" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M46 80V38l40-8v42" /><path d="M46 46l40-8" stroke-width="5"/><ellipse cx="38" cy="82" rx="10" ry="7" fill="#001F54" transform="rotate(-18 38 82)"/><ellipse cx="78" cy="74" rx="10" ry="7" fill="#001F54" transform="rotate(-18 78 74)"/><path d="M22 96c20-6 52-6 76 0" stroke-width="2"/></svg>',
+ gears:'<svg viewBox="0 0 120 120" fill="none" stroke="#001F54" stroke-linecap="butt"><circle cx="48" cy="56" r="18" stroke-width="10" stroke-dasharray="7 5.2" fill="none"/><circle cx="48" cy="56" r="13" stroke-width="2.6" fill="#fff"/><circle cx="48" cy="56" r="5" stroke-width="2.6"/><circle cx="80" cy="76" r="14" stroke-width="9" stroke-dasharray="6 4.9"/><circle cx="80" cy="76" r="9.5" stroke-width="2.6" fill="#fff"/><circle cx="80" cy="76" r="3.5" stroke-width="2.6"/></svg>',
+ crown:'<svg viewBox="0 0 120 120" fill="none" stroke="#001F54" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M28 82l-6-38 20 16 18-26 18 26 20-16-6 38z" fill="#fff"/><rect x="28" y="86" width="64" height="10" rx="2" fill="#fff"/><circle cx="22" cy="42" r="4" fill="#001F54"/><circle cx="60" cy="31" r="4" fill="#001F54"/><circle cx="98" cy="42" r="4" fill="#001F54"/><path d="M38 74h44M44 66h32" stroke-width="2"/></svg>'
 };
 /* ============ BOOK IDENTITY ============ */
 const BOOK = {
@@ -1269,10 +1269,10 @@ const PREBOOK = {
   ]
 };
 const ADDON_ICONS = {
-  peek:'<svg viewBox="0 0 40 40" fill="none" stroke="#193257" stroke-width="2" stroke-linejoin="round"><path d="M4 10c6-3 11-2 16 2 5-4 10-5 16-2v22c-6-3-11-2-16 2-5-4-10-5-16-2z"/><path d="M20 12v22"/><path d="M8 16h7M8 21h7M25 16h7" stroke="#ED703D" stroke-width="2.4" stroke-linecap="round"/></svg>',
-  canvas:'<svg viewBox="0 0 40 40" fill="none" stroke="#193257" stroke-width="2"><circle cx="20" cy="20" r="15" stroke-dasharray="2 3"/><circle cx="20" cy="20" r="6" fill="#ED703D" stroke="none"/><g fill="#193257" stroke="none"><circle cx="20" cy="5" r="2.4"/><circle cx="33" cy="12.5" r="2.4"/><circle cx="33" cy="27.5" r="2.4"/><circle cx="20" cy="35" r="2.4"/><circle cx="7" cy="27.5" r="2.4"/><circle cx="7" cy="12.5" r="2.4"/></g></svg>',
-  live:'<svg viewBox="0 0 40 40" fill="none" stroke="#193257" stroke-width="2" stroke-linejoin="round"><rect x="4" y="8" width="32" height="21" rx="2"/><path d="M14 35h12M20 29v6"/><circle cx="15" cy="17" r="3.2" fill="#ED703D" stroke="none"/><circle cx="25" cy="17" r="3.2" fill="#ED703D" stroke="none"/><path d="M10 25c1-3 3-4 5-4s4 1 5 4M20 25c1-3 3-4 5-4s4 1 5 4"/></svg>',
-  pen:'<svg viewBox="0 0 40 40" fill="none" stroke="#193257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M27 6l7 7-17 17-9 2 2-9z"/><path d="M23 10l7 7"/><path d="M5 36c5-3 9 1 13-1s7-3 12 0" stroke="#ED703D" stroke-width="2.4"/></svg>'
+  peek:'<svg viewBox="0 0 40 40" fill="none" stroke="#001F54" stroke-width="2" stroke-linejoin="round"><path d="M4 10c6-3 11-2 16 2 5-4 10-5 16-2v22c-6-3-11-2-16 2-5-4-10-5-16-2z"/><path d="M20 12v22"/><path d="M8 16h7M8 21h7M25 16h7" stroke="#00509E" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  canvas:'<svg viewBox="0 0 40 40" fill="none" stroke="#001F54" stroke-width="2"><circle cx="20" cy="20" r="15" stroke-dasharray="2 3"/><circle cx="20" cy="20" r="6" fill="#00509E" stroke="none"/><g fill="#001F54" stroke="none"><circle cx="20" cy="5" r="2.4"/><circle cx="33" cy="12.5" r="2.4"/><circle cx="33" cy="27.5" r="2.4"/><circle cx="20" cy="35" r="2.4"/><circle cx="7" cy="27.5" r="2.4"/><circle cx="7" cy="12.5" r="2.4"/></g></svg>',
+  live:'<svg viewBox="0 0 40 40" fill="none" stroke="#001F54" stroke-width="2" stroke-linejoin="round"><rect x="4" y="8" width="32" height="21" rx="2"/><path d="M14 35h12M20 29v6"/><circle cx="15" cy="17" r="3.2" fill="#00509E" stroke="none"/><circle cx="25" cy="17" r="3.2" fill="#00509E" stroke="none"/><path d="M10 25c1-3 3-4 5-4s4 1 5 4M20 25c1-3 3-4 5-4s4 1 5 4"/></svg>',
+  pen:'<svg viewBox="0 0 40 40" fill="none" stroke="#001F54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M27 6l7 7-17 17-9 2 2-9z"/><path d="M23 10l7 7"/><path d="M5 36c5-3 9 1 13-1s7-3 12 0" stroke="#00509E" stroke-width="2.4"/></svg>'
 };
 const money = n => PREBOOK.currency + n.toLocaleString('en-IN');
 
@@ -1380,7 +1380,7 @@ function prebook(){
     const lp = (deg,r) => [200 + r*Math.sin(d2r(deg)), 200 - r*Math.cos(d2r(deg))];
     const loopLabels = [['Brand',0],['Demand',120],['Experience',240]].map(([t,deg])=>{ const [x,y]=lp(deg,104); return `<text class="loopt" x="${x.toFixed(1)}" y="${(y+5).toFixed(1)}">${t}</text>`; }).join('');
     dial.innerHTML = `<svg viewBox="0 0 400 400" aria-hidden="true">
-      <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ED703D"/></marker></defs>
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#00509E"/></marker></defs>
       <circle class="ring" cx="200" cy="200" r="170"/>
       ${spokes}
       <path class="loop" marker-end="url(#ah)" d="${arc(d2r(26),d2r(94),78)}"/>
@@ -1868,24 +1868,24 @@ function authors(){
 }
 
 /* --- Ask Ganesha --- */
-const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line drawing of Lord Ganesha" fill="none" stroke="#193257" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+const GANESHA_SVG = `<svg viewBox="0 0 240 240" role="img" aria-label="Line drawing of Lord Ganesha" fill="none" stroke="#001F54" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="120" cy="128" r="100" fill="#FCE9DF" stroke="none"/>
   <path d="M86 96C44 74 30 132 54 160C66 172 84 164 90 148" fill="#fff"/>
   <path d="M154 96C196 74 210 132 186 160C174 172 156 164 150 148" fill="#fff"/>
   <path d="M58 118c6-6 14-8 22-6M182 118c-6-6-14-8-22-6" stroke-width="1.8"/>
   <path d="M92 76L98 42L110 60L120 30L130 60L142 42L148 76Z" fill="#F6B48E"/>
-  <circle cx="120" cy="48" r="3" fill="#193257"/><circle cx="104" cy="58" r="2.2" fill="#193257"/><circle cx="136" cy="58" r="2.2" fill="#193257"/>
+  <circle cx="120" cy="48" r="3" fill="#001F54"/><circle cx="104" cy="58" r="2.2" fill="#001F54"/><circle cx="136" cy="58" r="2.2" fill="#001F54"/>
   <path d="M92 76h56" stroke-width="3.2"/>
   <ellipse cx="120" cy="106" rx="34" ry="34" fill="#fff"/>
-  <path d="M114 80c2 8 10 8 12 0" stroke="#ED703D" stroke-width="2.6"/><path d="M120 84v8" stroke="#ED703D" stroke-width="2.6"/>
+  <path d="M114 80c2 8 10 8 12 0" stroke="#00509E" stroke-width="2.6"/><path d="M120 84v8" stroke="#00509E" stroke-width="2.6"/>
   <path d="M100 104c5-5 11-5 15 0c-5 4-10 4-15 0z"/><path d="M125 104c4-5 10-5 15 0c-5 4-10 4-15 0z"/>
-  <circle cx="108" cy="104" r="1.8" fill="#193257"/><circle cx="132" cy="104" r="1.8" fill="#193257"/>
+  <circle cx="108" cy="104" r="1.8" fill="#001F54"/><circle cx="132" cy="104" r="1.8" fill="#001F54"/>
   <path d="M120 116C118 150 122 172 142 182C158 190 168 176 160 168" stroke-width="22"/>
   <path d="M120 116C118 150 122 172 142 182C158 190 168 176 160 168" stroke="#fff" stroke-width="16.8"/>
   <path d="M113 134h14M113 146h14M116 158h13M124 169l10 6" stroke-width="1.6"/>
   <path d="M104 126c-8 12-7 26 2 34" stroke-width="9"/><path d="M104 126c-8 12-7 26 2 34" stroke="#fff" stroke-width="5"/>
   <path d="M136 126c4 4 5 8 4 12" stroke-width="9"/><path d="M136 126c4 4 5 8 4 12" stroke="#fff" stroke-width="5"/>
-  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#ED703D" stroke-width="2"/>
+  <path d="M164 196c4-10 14-12 18-4c4 8-6 14-18 4z" fill="#00509E" stroke-width="2"/>
   <path d="M60 214c38-12 82-12 120 0" stroke-width="1.8"/>
 </svg>`;
 const GANESHA_LESSONS = [["Big ears","Listen more than you speak, especially to buyers."],["Small eyes","Focus on the few beliefs worth earning."],["Long trunk","Reach far, and adapt to every room."],["One tusk","Grit. Sacrifice certainty for insight."],["Large belly","Digest knowledge and turn it into energy."],["The modak","Reward the patient work of building trust."]];
