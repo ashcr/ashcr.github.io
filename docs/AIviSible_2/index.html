@@ -542,6 +542,33 @@ footer{border-top:1px solid var(--rule)}
 .gx-actions .cta:disabled{opacity:.6;cursor:wait}
 .gx-note{font-size:14px;color:var(--ink-2);margin:0}
 @media (max-width:900px){.gx{grid-template-columns:1fr}.gx-side{position:static;order:2}.gx-art{width:160px}.gx-log{max-height:none}}
+
+/* Light theme: keep text readable on the blue panels */
+:root[data-theme="light"] .scard.aqua,
+:root[data-theme="light"] .scard.aqua b,
+:root[data-theme="light"] .scard.aqua s{
+  color:#fff;
+}
+:root[data-theme="light"] .scard.aqua svg{
+  stroke:#fff;
+}
+:root[data-theme="light"] .scard.aqua svg [fill="#0B1514"]{
+  fill:#fff;
+}
+:root[data-theme="light"] .final,
+:root[data-theme="light"] .final h2,
+:root[data-theme="light"] .final h2 .serif,
+:root[data-theme="light"] .final p{
+  color:#fff;
+}
+:root[data-theme="light"] .final .cta{
+  background:#fff;
+  color:#00509E !important;
+}
+:root[data-theme="light"] .final .cta:hover{
+  background:#E5F0FB;
+  color:#00509E !important;
+}
 </style>
 
 </head>
