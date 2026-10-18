@@ -827,6 +827,35 @@ a,button{-webkit-tap-highlight-color:transparent}
   .mini i{height:36px;font-size:16px}
   .az button{width:32px;height:32px}
 }
+
+/* Light theme: text and icons must stay clear on blue panels */
+:root[data-theme="light"] .scard.aqua,
+:root[data-theme="light"] .scard.aqua b,
+:root[data-theme="light"] .scard.aqua s{
+  color:#fff;
+}
+:root[data-theme="light"] .scard.aqua svg{
+  stroke:#fff;
+}
+:root[data-theme="light"] .scard.aqua svg [fill="#001F54"],
+:root[data-theme="light"] .scard.aqua svg [fill="#0B1514"]{
+  fill:#fff;
+}
+:root[data-theme="light"] .final h2,
+:root[data-theme="light"] .final h2 .serif,
+:root[data-theme="light"] .final p{
+  color:#fff;
+}
+:root[data-theme="light"] .mini i{
+  color:#1C1C1C;
+}
+:root[data-theme="light"] .mini i.h,
+:root[data-theme="light"] .mini i.n{
+  color:#fff;
+}
+:root[data-theme="light"] .cv-auth span{
+  color:#5A5A5A;
+}
 </style>
 
 </head>
