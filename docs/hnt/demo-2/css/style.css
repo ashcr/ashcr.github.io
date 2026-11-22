@@ -879,3 +879,4 @@ button,input,select,textarea{font:inherit;color:inherit}
 }
 @media (max-width:480px){.cards,.shop .cards{grid-template-columns:1fr!important}}
 @media (max-width:860px){.tg blockquote{margin:0}.tg figure{padding:24px 20px}}
+.tg blockquote{margin:0}
