@@ -825,3 +825,57 @@ button,input,select,textarea{font:inherit;color:inherit}
 .fsnap{padding-bottom:20px}
 @media (max-width:900px){.fsnap{padding:64px 20px 8px}}
 .shop{padding-top:56px}
+
+/* ===== Mobile polish (phone review) ===== */
+@media (max-width:860px){
+  /* testimonial band: readable over the photo */
+  .tband{min-height:0!important;padding:72px 0 64px!important;align-items:flex-start}
+  .tband::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62);z-index:1}
+  .tband-in{width:auto!important;margin:0!important;padding:0 20px!important;z-index:2}
+  .tb-q{font-size:25px!important;line-height:1.16!important;letter-spacing:-.03em!important;margin-bottom:36px!important}
+  /* "Experience across" list: clean, one type style */
+  .hg-feat ul{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .hg-feat li{width:auto!important;height:auto!important;display:block!important;font:500 20px/1.2 var(--sans,inherit)!important;font-style:normal!important;letter-spacing:-.02em!important;text-transform:none!important;color:#111!important;background:var(--g1)!important;border-radius:12px;padding:14px 16px!important;text-align:left}
+  /* story cards: fit the screen so quotes are not cut */
+  .story{flex:0 0 78vw!important}
+  .story img,.story video{height:420px!important}
+  .story blockquote{margin-right:0;font-size:15px;line-height:22px}
+  /* results headline */
+  .res-top h2{font-size:34px!important;line-height:1.05!important}
+  /* method card: badge no longer covers the steps */
+  .up-card{min-height:0!important;padding:32px 22px 28px!important;align-items:stretch}
+  .up-card h3{font-size:30px!important;line-height:1.05!important}
+  .up-meta{flex-wrap:wrap;gap:14px 22px}
+  .up-badge{position:static!important;display:inline-block;margin-top:22px;font-size:14px!important;padding:12px 14px!important}
+  /* featured insight: full-width list, single-line labels */
+  .pod{padding:48px 20px 56px!important}
+  .pod-card{grid-template-columns:1fr!important;padding:24px 18px!important;gap:28px!important}
+  .pod-main img{width:100%!important;height:220px!important}
+  .pod-main h3{font-size:28px!important;line-height:1.1!important}
+  .pl-row{display:grid!important;grid-template-columns:72px 1fr!important;gap:14px!important;align-items:center;padding:12px 0!important}
+  .pl-row img{width:72px!important;height:72px!important;border-radius:10px;object-fit:cover}
+  .pl-row small{display:block;white-space:nowrap;font-size:10.5px!important;line-height:14px!important;margin-bottom:4px}
+  .pl-row b{display:block;font-size:16px!important;line-height:20px!important;letter-spacing:-.01em!important}
+  .pl-row .listen{display:none!important}
+  /* general headline sizes on phones */
+  .fsnap h2,.tgrid h2{font-size:36px!important}
+  .ready h2{font-size:32px!important;line-height:1.08!important}
+}
+@media (max-width:860px){
+  .up-badge{display:none!important}
+  .up-card{flex-direction:column;justify-content:flex-end}
+  .up-txt{max-width:none!important;width:100%}
+  .story-img{height:420px!important}
+}
+@media (max-width:860px){.ready,.ready-sm{padding:96px 20px 88px!important}.ftr{padding:0 20px 32px}.ftr-top{padding-top:40px;padding-bottom:40px}}
+@media (max-width:860px){
+  .stmt{padding:64px 20px}
+  .stmt p{font-size:24px!important;line-height:1.22!important;letter-spacing:-.02em!important}
+  .qband{padding:72px 20px}
+  .qband blockquote{font-size:24px!important;line-height:1.2!important;letter-spacing:-.02em!important}
+  .tg figure{margin:0}
+  .cards,.shop .cards{grid-template-columns:1fr 1fr!important;gap:28px 14px!important;padding:0!important}
+  .card-m{font-size:12px!important;line-height:16px!important}
+}
+@media (max-width:480px){.cards,.shop .cards{grid-template-columns:1fr!important}}
+@media (max-width:860px){.tg blockquote{margin:0}.tg figure{padding:24px 20px}}

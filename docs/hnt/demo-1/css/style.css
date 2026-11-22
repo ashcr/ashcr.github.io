@@ -634,3 +634,40 @@ body{font-stretch:104%}
 .lib.lib-top,.lib.lib-sm{min-height:0;padding-bottom:56px}
 @media (max-width:900px){.lib{min-height:0;padding-bottom:64px}.eps{padding-bottom:24px}}
 @media (max-width:900px){.lib{padding-top:24px}.eps .ep-row{margin-bottom:0;padding-bottom:0}}
+
+/* ===== Mobile polish (phone review) ===== */
+@media (max-width:900px){
+  /* hero: photo on top, text on solid dark below — never over the face */
+  .hero{display:block;min-height:0}
+  .hero .hero-bg{position:absolute;top:0;left:0;right:0;bottom:auto;width:100%;height:440px;object-fit:cover;object-position:35% 22%}
+  .hero::after{inset:auto 0 auto 0;top:250px;height:200px;background:linear-gradient(180deg,rgba(29,29,29,0) 0%,#1d1d1d 85%)}
+  .hero-in{padding:380px 20px 40px!important}
+  .hero h1{font-size:38px;line-height:1.08;margin-bottom:18px}
+  .hero p{font-size:16px;line-height:25px}
+  .hero p.hero-body{font-size:14px;line-height:22px}
+  /* floating "New here?" button: small and out of the way */
+  .newhere{width:64px;height:64px;font-size:11px;line-height:13px;right:14px;bottom:16px}
+  /* tighter section rhythm */
+  .press{padding:56px 20px 60px}
+  .press-q{font-size:24px;line-height:30px}
+  .eps{padding:56px 20px 32px}
+  .book{padding-top:56px!important;padding-bottom:56px!important}
+  .svcs{padding:56px 20px 8px}
+  .feat{padding-top:56px!important;padding-bottom:56px!important}
+  /* footer: 2 clean columns */
+  .ftr{padding:40px 20px 96px}
+  .ftr-in{grid-template-columns:1fr;gap:12px}
+  .ftr-cols{grid-template-columns:1fr 1fr;gap:8px 20px}
+  .ftr li a{line-height:28px;font-size:15px}
+}
+@media (max-width:600px){
+  main h2,section h2{font-size:30px!important;line-height:1.14!important;letter-spacing:-.01em}
+  .closing h2{font-size:28px!important}
+  .hero h1{font-size:34px}
+  .topics{gap:12px}
+  .topic{padding:16px 8px}
+  .topic h3{font-size:11.5px;line-height:15px;letter-spacing:.2px;overflow-wrap:normal;word-break:normal;hyphens:none}
+  .ep-row > :nth-child(n+5){display:none}
+  .ep-t{font-size:14.5px;line-height:18px}
+}
+@media (max-width:900px){.ftr .two{grid-template-columns:1fr;gap:0}} @media (max-width:600px){.newhere{display:none}}
